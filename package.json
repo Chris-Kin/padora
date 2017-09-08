@@ -1,0 +1,33 @@
+{
+  "name": "padora",
+  "description": "The first cli",
+  "version": "1.0.0",
+  "keywords": [
+    "toolkit",
+    "cli"
+  ],
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "y": "./bin/y.js"
+  },
+  "dependencies": {
+    "commander": "2.11.0",
+    "chalk": "2.1.0"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
