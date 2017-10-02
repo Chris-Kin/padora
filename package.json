@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "commander": "2.11.0",
-    "chalk": "2.1.0"
+    "chalk": "2.1.0",
+    "request": "2.81.0"
   },
   "devDependencies": {
   },

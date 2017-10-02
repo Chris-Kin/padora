@@ -4,22 +4,35 @@
 
 var program = require('commander');
 
+program
+    .version('0.0.1');
 
 program
-    .version('0.0.1');//声明y的版本号
-
+  .command('l')
+  .description('list files in current working directory')
+  // 设置命令的参数
+  .option('-t, --tree [mode]', 'Whether to display files tree graph')
+  // 命令实现体
+  .action(function(options) {
+    require('../command/list.js')(options)
+  })
 
 program
+  .command('trans')
+  .description('translate words between chinese and english')
+  // 设置命令的参数
+  .option('-w, --word [mode]', 'the words which need be translated')
+  // 命令实现体
+  .action(function(options) {
+    require('../command/trans.js')(options)
+  })
 
-    .command('list')//声明hi下有一个命令叫list
+program
+  .command('btc')
+  .description('detect the price of digital coins')
+  .action(function(options) {
+    require('../command/btc.js')(options)
+  });
 
-    .description('list files in current working directory')//给出list这个命令的描述
-
-    .option('-a, --all', 'Whether to display hidden files')//设置list这个命令的参数
-
-    .action(function(options) {//list命令的实现体
-        require('../command/list.js')(options)
-    });
-
-
-program.parse(process.argv);//开始解析用户输入的命令
+// 开始解析用户输入的命令
+program.parse(process.argv);
