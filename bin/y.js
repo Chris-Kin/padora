@@ -14,7 +14,7 @@ program
   .option('-t, --tree [mode]', 'Whether to display files tree graph')
   // 命令实现体
   .action(function(options) {
-    require('../command/list.js')(options)
+    require('../command/list/')(options)
   })
 
 program
@@ -24,14 +24,14 @@ program
   .option('-w, --word [mode]', 'the words which need be translated')
   // 命令实现体
   .action(function(options) {
-    require('../command/trans.js')(options)
+    require('../command/trans/')(options)
   })
 
 program
   .command('btc')
   .description('detect the price of digital coins')
   .action(function(options) {
-    require('../command/btc.js')(options)
+    require('../command/btc/')(options)
   });
 
 // 开始解析用户输入的命令
