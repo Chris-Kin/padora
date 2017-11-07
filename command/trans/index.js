@@ -14,7 +14,7 @@ module.exports = function(options) {
 
   console.log(chalk.yellow(word));
 
-  getresult(word, spinner);
+  getresult(word, Spinner);
   // request('https://translate?a', function (error, response, body) {
   //   if (!error && response.statusCode == 200) {
   //     var result = JSON.parse(body);

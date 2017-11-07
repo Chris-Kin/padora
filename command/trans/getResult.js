@@ -1,7 +1,7 @@
 const superagent = require('superagent');
 const isChinese = require('is-chinese');
-const token = require('./gettoken.js');
-const dealresult = require('./dealresult.js');
+const token = require('./token.js');
+const dealresult = require('./deal.js');
 
 const getResult = (input, spinner) => {
   const isCh = isChinese(input);
