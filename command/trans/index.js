@@ -10,8 +10,6 @@ module.exports = function(options) {
 
   var word = options.word;
 
-  // console.log( '正在查询' ,chalk.yellow(word));
-
   var spinner = new Spinner('%s');
   spinner.setSpinnerString('⠄⠆⠇⠋⠙⠸⠰⠠⠰⠸⠙⠋⠇⠆');
   spinner.start();

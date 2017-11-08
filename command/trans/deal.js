@@ -12,7 +12,7 @@ function dealresult(response) {
 
   if (obj[1] == null) {
     //console.log('你的词可能有错，请再次查询，或者词没错请联系我 ');
-    result = '你的词可能有错，请重试，或者词没错请联系我 https://github.com/Neoyyy/google-CommandLine-Translation-Tool ';
+    result = ' 没查到 ';
   } else {
     cleannull(obj);
     if (obj[0][0][1] !== undefined) {
