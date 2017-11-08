@@ -2,6 +2,7 @@ const superagent = require('superagent');
 const isChinese = require('is-chinese');
 const token = require('./token.js');
 const dealresult = require('./deal.js');
+const chalk = require('chalk');
 
 const getResult = (input, spinner) => {
   const isCh = isChinese(input);
@@ -33,8 +34,7 @@ const getResult = (input, spinner) => {
         if (err || !res.ok) {
           console.log("query err:" + err);
         } else {
-
-          console.log(dealresult(res));
+          console.log(chalk.greenBright(dealresult(res)));
         }
       });
 

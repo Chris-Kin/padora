@@ -38,7 +38,7 @@ function dealresult(response) {
 
     }
   }
-  return result;
+  return result.translate;
 }
 
 function cleannull(arr) {

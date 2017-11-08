@@ -10,16 +10,12 @@ module.exports = function(options) {
 
   var word = options.word;
 
-  // var isEnglish = !/[^\x00-\xff]/.test(word);
+  // console.log( '正在查询' ,chalk.yellow(word));
 
-  console.log(chalk.yellow(word));
+  var spinner = new Spinner('%s');
+  spinner.setSpinnerString('⠄⠆⠇⠋⠙⠸⠰⠠⠰⠸⠙⠋⠇⠆');
+  spinner.start();
 
-  getresult(word, Spinner);
-  // request('https://translate?a', function (error, response, body) {
-  //   if (!error && response.statusCode == 200) {
-  //     var result = JSON.parse(body);
-  //     console.log(result);
-  //   }
-  // });
+  getresult(word, spinner);
 
 }
