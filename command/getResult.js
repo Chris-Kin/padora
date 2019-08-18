@@ -26,13 +26,13 @@ const getResult = (input, spinner) => {
       tk: tk.value,
       q: input
     }
-    var request = superagent.get('https://translate.google.cn/translate_a/single')
+    superagent.get('https://translate.google.cn/translate_a/single')
       .query(arg)
       .end(function (err, res) {
         spinner.stop(true);
 
         if (err || !res.ok) {
-          console.log("query err:" + err);
+          console.log(chalk.redBright('query error:'), err + '');
         } else {
           console.log(chalk.greenBright(dealresult(res)));
         }

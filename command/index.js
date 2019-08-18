@@ -4,7 +4,7 @@ var chalk = require('chalk');
 
 
 const Spinner = require('cli-spinner').Spinner;
-const getresult = require('../getResult.js/index.js');
+const getresult = require('./getResult.js');
 
 module.exports = function(options) {
 
